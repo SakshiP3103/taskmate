@@ -3,18 +3,18 @@
 
 const zod=require("zod");
 //writing the zod schema
-const createtodo=zod.object({
+const createTodo=zod.object({
     title:zod.string(),
     description:zod.string()
 })
 
-const updatetodo=zod.object({
+const updateTodo=zod.object({
     id:zod.string(),
    
 })
 //to export these
 module.exports={
-    createtodo:createtodo,
-    updatetodo:updatetodo
+    createTodo:createTodo,
+    updateTodo:updateTodo
 }
 

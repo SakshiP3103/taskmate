@@ -9,7 +9,7 @@ app.use(express.json());
 app.post("/todo",async function(req,res){
   const createPayLoad=req.body;
   const parsedPayLoad=createTodo.safeParse(createPayLoad);
-   if(!parsedPayLoad.sucess){
+   if(!parsedPayLoad.success){
     res.status(411).json({
         msg:"you sent the wrong inputs",
     })
@@ -56,3 +56,4 @@ app.put("/completed",async function(req,res){
     msg:"todos marked as completed"
 })
 })
+app.listen(3000);
